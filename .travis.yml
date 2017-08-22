@@ -27,7 +27,7 @@ cache:
     - "node_modules"
 
 before_deploy:
-  - cp server/** dist/
+  - cp src/server/** dist/
   - cd dist
   - npm install
 
