@@ -6,8 +6,11 @@ branches:
     - ciprocess
 before_script:
   - npm install -g @angular/cli
-  - npm install
+cache:
+  directories:
+    - "node_modules"
 before_deploy:
+  - ng build --prod
   - cp server/** dist/
   - cd dist
   - npm install
