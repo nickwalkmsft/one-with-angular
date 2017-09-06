@@ -27,6 +27,7 @@ cache:
     - "node_modules"
 
 before_deploy:
+  - git fetch --unshallow
   - cp ./src/server/** dist/
   - cd ./dist
 
